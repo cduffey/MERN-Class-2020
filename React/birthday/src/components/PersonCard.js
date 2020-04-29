@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 const Button = (props) => {
 	return (
-		<button onClick={props.click}>Birthday</button>
+		<button onClick={props.click}>Birthday for {props.firstName}</button>
 	)
 }
 
@@ -28,7 +28,7 @@ class PersonCard extends Component {
 					<tr><th class="props_header">{this.props.lastName}, {this.props.firstName}</th></tr>
 					<tr><td class="props_data">Age: {this.state.age}</td></tr>
 					<tr><td class="props_data">Hair Color: {this.props.hairColor}</td></tr>
-					<tr><td class="props_data"><Button click={this.handleClick} /></td></tr>
+					<tr><td class="props_data"><Button click={this.handleClick} firstName={this.props.firstName}/></td></tr>
 				</table>				
 			</div>
 		);
