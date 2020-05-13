@@ -54,7 +54,7 @@ const UserForm = (props) => {
 
     const validatePasswordConfirmation = (e) => {
         setConfirmPassword(e.target.value)
-        if(password != confirmPassword) {
+        if(password !== confirmPassword) {
             setPasswordError(false);
         }
         else {
